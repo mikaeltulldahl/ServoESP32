@@ -240,6 +240,11 @@ class ServoTemplate : public ServoBase {
      */
     int attachedPin() const { return _pin; }
 
+    String serialize() const {
+        String result = "servo target angle: " + String(read()) + " rad\n";
+        return result;
+    }
+
    private:
     void _resetFields(void) {
         _pin = PIN_NOT_ATTACHED;
