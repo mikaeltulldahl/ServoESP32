@@ -241,7 +241,7 @@ class ServoTemplate : public ServoBase {
     int attachedPin() const { return _pin; }
 
     String serialize() const {
-        String result = "servo target angle: " + String(read()) + " rad\n";
+        String result = "servo target_angle: " + String(read()) + " rad\n";
         return result;
     }
 
